@@ -16,11 +16,11 @@
 
 8) Multi cell battle ships (I && L) must consist of 4 cells, so there is no ambiguity of L shapes that do not look like L and I shapes of more or less than 4 cells.
 
-#---
+# ---
 
 PHP Version 7.3.3
 
-#--
+# ---
 composer install
 
 npm install
