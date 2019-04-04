@@ -11,12 +11,14 @@ use Twig\TwigFunction;
 
 require 'vendor/autoload.php';
 require './Init/Cells.php';
+require './Init/Battleships.php';
 
 $loader = new FilesystemLoader('templates');
 $twig_template = new Environment($loader);
 
 $twig_function = new TwigFunction('Cells', function () {
-    echo Cells::init();
+    $cells = new Cells(10, 10);
+    echo $cells->init();
 });
 
 $twig_template->addFunction($twig_function);
