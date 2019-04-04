@@ -8,15 +8,15 @@ namespace Init;
  */
 class Cells
 {
-    protected $rows = 10;
-    protected $cols = 10;
+    public $rows;
+    public $cols;
     
     /**
      * Cells constructor.
-     * @param int $rows
-     * @param int $cols
+     * @param $rows
+     * @param $cols
      */
-    public function __construct(int $rows, int $cols)
+    public function __construct($rows, $cols)
     {
         $this->rows = $rows;
         $this->cols = $cols;
@@ -25,8 +25,11 @@ class Cells
     /**
      * @return string
      */
-    public static function init()
+    public function init()
     {
+        $battleships = new Battleships($this->rows, $this->cols);
+        dump($battleships->initShips());
+        
         $table = "<table class=\"table\">\n";
         
         $table .= "<thead>\n";
