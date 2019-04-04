@@ -2,6 +2,9 @@
   "name": "battleship-game",
   "version": "1.0.0",
   "main": "gulpfile.js",
+  "scripts": {
+    "dev": "gulp dev"
+  },
   "dependencies": {
     "bootstrap": "^4.3.1"
   },
