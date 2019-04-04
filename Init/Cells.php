@@ -9,17 +9,17 @@ namespace Init;
 class Cells
 {
     protected $rows = 10;
-    protected $colls = 10;
+    protected $cols = 10;
     
     /**
      * Cells constructor.
      * @param int $rows
-     * @param int $colls
+     * @param int $cols
      */
-    public function __construct(int $rows, int $colls)
+    public function __construct(int $rows, int $cols)
     {
         $this->rows = $rows;
-        $this->colls = $colls;
+        $this->cols = $cols;
     }
     
     /**
