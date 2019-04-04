@@ -3,7 +3,9 @@
   "description": "Battleship Game Example",
   "keywords": [
     "battleship",
-    "game"
+    "game",
+    "example",
+    "tutorial"
   ],
   "license": "MIT",
   "minimum-stability": "stable",
