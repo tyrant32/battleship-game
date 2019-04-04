@@ -1,0 +1,21 @@
+{
+  "name": "tyrant32/battleship-game",
+  "description": "Battleship Game Example",
+  "keywords": [
+    "battleship",
+    "game"
+  ],
+  "license": "MIT",
+  "minimum-stability": "stable",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Ivan Ivanov",
+      "email": "tyrant32@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.3.3",
+    "twig/twig": "^2.0"
+  }
+}
