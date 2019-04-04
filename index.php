@@ -1,8 +1,6 @@
 <?php
 declare(strict_types=1);
 
-die('Under Construction');
-
 use Init\Cells;
 use Twig\Environment;
 use Twig\Error\LoaderError;
@@ -39,4 +37,5 @@ try
     echo $exception->getMessage();
     exit();
 }
+
 echo $template->render();
