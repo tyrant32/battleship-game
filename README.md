@@ -1,4 +1,4 @@
-# battleship-game
+# battleship-game v1
 
 1) UI implementation is not important. Use the simplest and the easiest way you can. It will not play any role in evaluation, apart from evaluating your general ability to implement a front-end part it needed.
 
