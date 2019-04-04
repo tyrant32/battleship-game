@@ -20,7 +20,9 @@
 
 PHP Version 7.0.33
 
-# ---
+# Run Project
 composer install
 
 npm install
+
+npm run dev
