@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-die('Under Construction');
+session_start();
 
 use Init\Cells;
 use Twig\Environment;
@@ -13,12 +13,14 @@ use Twig\TwigFunction;
 
 require 'vendor/autoload.php';
 require './Init/Cells.php';
+require './Init/Battleships.php';
 
 $loader = new FilesystemLoader('templates');
 $twig_template = new Environment($loader);
 
 $twig_function = new TwigFunction('Cells', function () {
-    echo Cells::init();
+    $cells = new Cells(10, 10);
+    echo $cells->init();
 });
 
 $twig_template->addFunction($twig_function);
@@ -39,4 +41,5 @@ try
     echo $exception->getMessage();
     exit();
 }
+
 echo $template->render();

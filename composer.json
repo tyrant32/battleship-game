@@ -3,7 +3,9 @@
   "description": "Battleship Game Example",
   "keywords": [
     "battleship",
-    "game"
+    "game",
+    "example",
+    "tutorial"
   ],
   "license": "MIT",
   "minimum-stability": "stable",
@@ -17,5 +19,8 @@
   "require": {
     "php": ">=7.0.33",
     "twig/twig": "^2.7.4"
+  },
+  "require-dev": {
+    "symfony/var-dumper": "v3.4.24"
   }
 }
