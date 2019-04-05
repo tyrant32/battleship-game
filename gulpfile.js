@@ -3,7 +3,9 @@ var gulp = require('gulp');
 function devTask() {
     return (
         gulp.src('./node_modules/bootstrap/dist/css/bootstrap.css')
-            .pipe(gulp.dest('./dist/assets'))
+            .pipe(gulp.dest('./dist/assets')),
+            gulp.src('./css/*')
+                .pipe(gulp.dest('./dist/assets'))
     );
 }
 
