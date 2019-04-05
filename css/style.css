@@ -1,0 +1,17 @@
+table {
+    border-collapse: inherit;
+}
+
+.table th, .table td {
+    border: 0;
+}
+
+.ocean {
+    background-color: aqua;
+    border: 1px #000000 solid;
+}
+
+.red {
+    background-color: #ff0000;
+    border: 1px #000000 solid;
+}
