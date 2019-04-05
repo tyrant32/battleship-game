@@ -2,6 +2,11 @@ table {
     border-collapse: inherit;
 }
 
+.container {
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
 .table th, .table td {
     border: 0;
 }
