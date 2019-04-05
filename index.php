@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+die('Under Construction');
+
 session_start();
 
 use Init\Cells;

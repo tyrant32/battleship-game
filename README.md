@@ -30,3 +30,7 @@ composer install
 npm install
 
 npm run dev
+
+# ---
+
+Example: [https://ivan-ivanov.info/battleship-game](https://ivan-ivanov.info/battleship-game)

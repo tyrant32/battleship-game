@@ -10,6 +10,8 @@ class Cells
 {
     public $rows;
     public $cols;
+    protected $gridArray = [];
+    protected $currentGridArray = [];
     
     /**
      * Cells constructor.
@@ -20,6 +22,7 @@ class Cells
     {
         $this->rows = $rows;
         $this->cols = $cols;
+        $this->currentGridArray = $this->initGridArray();
     }
     
     /**
@@ -27,9 +30,11 @@ class Cells
      */
     public function init()
     {
-        $battleships = new Battleships($this->rows, $this->cols);
-        dump($battleships->initShips());
+        $class = "ocean";
         
+        $battleships = new Battleships($this->rows, $this->cols);
+        $battleships->initShips();
+    
         $table = "<table class=\"table\">\n";
         
         $table .= "<thead>\n";
@@ -52,10 +57,12 @@ class Cells
         {
             $table .= "<tr> \n";
             $table .= "<td>$table_row</td> \n";
+    
             for ($table_col = 1; $table_col <= 10; $table_col++)
             {
-                $table_p = $table_col * $table_row;
-                $table .= "<td>$table_p</td> \n";
+                // $table_p = $table_col * $table_row;
+    
+                $table .= "<td class=\"$class\">-</td> \n";
             }
             $table .= "</tr> \n";
         }
@@ -64,5 +71,53 @@ class Cells
         $table .= "</table>";
         
         return $table;
+    }
+    
+    /**
+     * @return array
+     */
+    public function initGridArray()
+    {
+        $this->setGridArray([
+            1  => ['A' => []],
+            2  => ['B' => []],
+            3  => ['C' => []],
+            4  => ['D' => []],
+            5  => ['E' => []],
+            6  => ['F' => []],
+            7  => ['G' => []],
+            8  => ['H' => []],
+            9  => ['I' => []],
+            10 => ['J' => []],
+        ]);
+        
+        for ($table_row = 1; $table_row <= 10; $table_row++)
+        {
+            for ($table_col = 1; $table_col <= 10; $table_col++)
+            {
+                $table_p = $table_col * $table_row;
+                array_push(
+                    $this->gridArray[ $table_row ][ key($this->gridArray[ $table_row ]) ], $table_p
+                );
+            }
+        }
+        
+        return $this->getGridArray();
+    }
+    
+    /**
+     * @return array
+     */
+    public function getGridArray(): array
+    {
+        return $this->gridArray;
+    }
+    
+    /**
+     * @param array $gridArray
+     */
+    public function setGridArray(array $gridArray)
+    {
+        $this->gridArray = $gridArray;
     }
 }
