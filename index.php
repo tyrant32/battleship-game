@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+session_start();
+
 use Init\Cells;
 use Twig\Environment;
 use Twig\Error\LoaderError;
