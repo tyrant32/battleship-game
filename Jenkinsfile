@@ -9,5 +9,21 @@ pipeline {
                 sh 'npm install'
             }
         }
+        stage('Deliver for development') {
+            when {
+                branch 'develop'
+            }
+            steps {
+                input message: 'Finished using the web site? (Click "Proceed" to continue)'
+            }
+        }
+        stage('Deploy for production') {
+            when {
+                branch 'prod'
+            }
+            steps {
+                input message: 'Finished using the web site? (Click "Proceed" to continue)'
+            }
+        }
     }
 }
